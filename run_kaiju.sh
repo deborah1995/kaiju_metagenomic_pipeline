@@ -11,7 +11,7 @@
 set -x  # Debug mode
 
 # Define sample ID as a variable
-sample="G68"
+sample="G72"
 
 # Base directory for the Kaiju run
 base_dir="/ibiscostorage/fmontemagno/geomosaic_mng23/kaiju"
@@ -46,6 +46,7 @@ fi
 kaiju -t "$nodes_file" -f "$kaiju_db" \
       -i "$r1" -j "$r2" \
       -o "$kaiju_output" -z 20
+
 
 # Add taxonomic names to the Kaiju output
 kaiju-addTaxonNames -t "$nodes_file" -n "$names_file" -i "$kaiju_output" -o "$kaiju_names_output"
